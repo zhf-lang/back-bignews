@@ -24,7 +24,7 @@ router.get('/userinfo', (req, res) => {
     // token里面第一个参数传了用户名之后，
     // 这里可以不用传用户名参数就能从req.user.name获取到用户名
     // 直接放到sql语句中就可以直接执行
-    console.log(req.user.name);
+    console.log(req.user);
 
     let sqlStr = `select * from users where username="${req.user.name}"`;
     console.log(sqlStr);
